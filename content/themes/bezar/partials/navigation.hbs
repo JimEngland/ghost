@@ -1,0 +1,9 @@
+<ul class="new-site-nav">
+    <li class="heading">Your Storefront</li>
+    {{#foreach navigation}}
+        {{#compare label '===' 'Fulfilling Orders' }}
+            <li class="heading">Orders</li>
+        {{/compare}}
+        <li{{#if current}} class="selected"{{/if}}><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>
